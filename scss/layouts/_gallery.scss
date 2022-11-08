@@ -1,0 +1,34 @@
+// gallery starts
+.gallery{
+        width: 100%;
+        height: auto;
+        background-color: $white;
+        &__GalleryDescription{
+            @extend .services__Titlepart;
+        }
+        &__GalleryTitle{
+            @extend .services__sectiontitle;
+        }
+        &__galleryTitle{
+            @extend .mainFeatures__featureTitle;
+        }
+        &__GalleryDetail{
+            @extend .mainFeatures__featurediscription;
+        }
+        &__GalleryPorducts{
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-wrap: wrap;
+            padding-bottom: 5%;
+        }
+        &__GalleryPortfolio{
+            background-color: $gray-dark;
+            transition:.3s all ease;
+            cursor: pointer;
+            &:hover{
+                transform:scale(.8);
+            }
+        }
+
+    }

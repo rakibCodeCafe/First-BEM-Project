@@ -1,0 +1,49 @@
+.about{
+    width: 100%;
+    height: auto;
+    background-color: $white;
+    &__contentPart{
+        @extend .mainFeatures__contents;
+        position: relative;
+        &::before{
+            content: " ";
+            position: absolute;
+            background-image: url("../images/svg/aboutIcon.svg");
+            width: 48%;
+            height: 25%;
+            top: -10px;
+            left: -26%;
+            z-index: 3;
+            transform: rotate(-47deg);
+        }
+        &::after{
+            content: " ";
+            position: absolute;
+            background-image: url("../images/svg/aboutIcon.svg");
+            width: 20%;
+            height: 56%;
+            top: 47%;
+            left: 85%;
+            z-index: 3;
+            transform: rotate(-4deg);
+        }
+    }
+    &__aboutTitle{
+        width: 100%;
+        height: auto;
+    }
+    &__aboutHeading{
+        @extend .mainFeatures__featureTitle;
+    }
+    &__aboutTitleExplanation{
+        @extend .mainFeatures__featurediscription;
+    }
+    &__aboutDescription{
+        @extend .about__aboutTitle;
+    }
+    &__aboutDetail{
+        @extend .mainFeatures__featurediscription;
+        color:  $gray-dark;
+        line-height: 35px;
+    }
+}

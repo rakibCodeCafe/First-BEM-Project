@@ -1,0 +1,105 @@
+.services{
+    width: 100%;
+    height: auto;
+    background-color: $white;
+    position: relative;
+    &::before{
+        content: " ";
+        position: absolute;
+        background-image: url("../images/svg/YellowBlue.png");
+        width: 48%;
+        height: 25%;
+        top: -53px;
+        left: -40%;
+        z-index: 3;
+        transform: rotate(171deg);
+        background-repeat: no-repeat;
+      }
+    &::after{
+        content: " ";
+        position: absolute;
+        width: 9%;
+        height: 25%;
+        right: 0;
+        bottom: -16%;
+        z-index: 3;
+        background-image: url("../images/svg/greenYellow.png");
+        background-repeat: no-repeat;
+
+    }  
+    &__maincontents{
+        position: relative;
+    }
+    &__Titlepart{
+        @extend .mainFeatures__contents;
+        width: 85%;
+    }
+    &__sectiontitle{
+        width: 100%;
+        height: auto;
+    }
+    &__ServiceTitle{
+        @extend .mainFeatures__featureTitle;
+    }
+    &__serviceBrief{
+        @extend .mainFeatures__featurediscription;
+
+    }
+    // service card starts*****
+    &__servicesitems{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 2%;
+    }
+    &__service{
+        @extend .card;
+    }
+    &__ImageBox{
+        width: 100%;
+        height: auto;
+    }
+    &__servicedetails{
+        width: 100%;
+        height: auto;
+        padding: 2%;
+    }
+    &__serviceTitle{
+        width: 80%;
+        height: auto;
+        padding: 2%;
+        margin: 0 auto;
+    }
+    &__serviceheading{
+        color: $dark;
+        font-size:$titleThird;
+        font-weight: $Regular;
+    }
+    &__servicedescription{
+        @extend .services__serviceTitle;
+        padding: 1%;
+    }
+    &__ServiceDescription{
+        font-size: $titleFifth;
+        font-weight: $Light;
+        padding: 0px 0px 0px 0px;
+        background-color: $transparent;
+    }
+    &__servicebutton {
+        width: 80%;
+        height: auto;
+        padding: 5%;
+        margin: 0 auto;
+      }
+    &__btnService{
+        @extend .btn;
+        color:  $moreDark;
+        transition: .3s all ease;
+        &:hover{
+            background-color: $primary;
+            color: $white;
+        }
+    }
+}

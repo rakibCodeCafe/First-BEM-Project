@@ -1,0 +1,76 @@
+// team section starts
+.team{
+    width: 100%;
+    height: auto;
+    background-color: $white;
+    &__TotalContent{
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+    }
+    &__teamBrief{
+        width: 80%;
+        height: auto;
+        margin: 0 auto;
+        padding: 4%;
+    }
+    &__heading{
+        @extend .mainFeatures__featureTitle;
+    }
+    &__teamDescription{
+        @extend .mainFeatures__featurediscription;
+    }
+    &__teamMemberCard{
+        @extend .mainFeatures__cardSpecification;
+    }
+    &__teamCard{
+        @extend .mainFeatures__specification;
+        padding: 0;
+    }
+    &__teamPicture{
+        width: 100%;
+        padding: 0px 0px 0px 0px;
+    }
+    &__teamPlayer{
+        transition: .3s all ease;
+        &:hover{
+            transform: scale(-1,1);
+        }
+    }
+    &__teamCardTitle{
+       width: 100%;
+       height: auto;
+       padding: 11%;
+    }
+    &__companyRank {
+        width: 100%;
+        height: auto;
+        display: block;
+        font-size: .88rem;
+    }
+    &__playerWords{
+        width: 80%;
+        height: auto;
+        margin: 0 auto;
+    }
+    &__playerOpinion{
+        font-size: .78rem;
+        font-weight: 400;
+        font-style: italic;
+        margin-bottom: 20px;
+        color: $info;
+      }
+      &__playerSocialMedia {
+        width: 80%;
+        height: auto;
+        margin: 0 auto;
+        transform: translate(9%);
+        padding-bottom: 6%;
+      }
+
+      &__socialPlatform {
+        padding: 0px 9px;
+        font-size: 22px;
+
+      }
+}

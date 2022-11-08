@@ -1,0 +1,82 @@
+.subscribe {
+    width: 100%;
+    height: auto;
+    background-color:$SubscribeColor;
+    &__maincontent {
+      padding-top: 7%;
+      padding-bottom: 7%;
+    }
+    &__SubscribeBox {
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-around;
+    }
+    &__SubscribeTitle {
+      width: 25%;
+      height: auto;
+      display: flex;
+    }
+    &__SubscribeHeading{
+      font-weight: $extraLight;
+      font-size:$BigFont;
+      padding: 0px 0px 0px 0px;
+      background-color: $transparent;
+      text-shadow: 0 0 0 $transparent;
+      text-align: center;
+      transform: translateX(19%);
+    }
+    &__SubscribeDescription {
+      width: 37%;
+      height: auto;
+      display: flex;
+      padding: 2%;
+    }
+    &__SubscribeBrief {
+      font-size: $FontSoft;
+      color: rgb(74, 155, 174);
+      padding: 0px 0px 0px 0px;
+      font-weight: $extraLight;
+      text-align: left;
+      transform: translateX(19%);
+    }
+    &__SubscribeMail {
+      width: 34%;
+      height: auto;
+      padding: 2%;
+      position: relative;
+    }
+    &__Sform {
+      transform: translateX(6%);
+    }
+    &__SubscribeSearch {
+      width: 71.3%;
+      height: auto;
+      padding: 12px 12px 12px 12px;
+      border: 1px solid #d9d9d9;
+      text-align: center;
+      font-family:$fontFamily;
+      font-size:$titleFifth;
+      font-style: italic;
+      position: relative;
+      border-right: none;
+    }
+    &__SubscribeBtn {
+      width: 25%;
+      height: auto;
+      padding: 14px 12px 12px 12px;
+      position: absolute;
+      font-size:$FontSoft;
+      text-transform: capitalize;
+      background-color: $danger;
+      left: 258px;
+      color: $white;
+      z-index: 12;
+      border: 1px solid $transparent;
+      cursor: pointer;
+    }
+  
+  }
+  

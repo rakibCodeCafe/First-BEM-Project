@@ -1,0 +1,140 @@
+.address{
+    width: 100%;
+    height: auto;
+    background-color:$Contact;
+    &__AddressElements {
+        width: 90%;
+        height: auto;
+        margin: 0 auto;
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+      }
+    &__FormBox{
+        width: 58%;
+        height: auto;
+    }
+    &__FormTitle{
+        width: 100%;
+        height: auto;
+        padding: 2%;
+    }
+    &__FormHeading{
+        color: $white;
+    }
+    &__ContactForm{
+        width: 100%;
+        height: auto;
+        padding: 2%;
+    }
+    &__CtForm{
+        width: 100%;
+        height: auto;
+
+    }
+    &__Name{
+        width: 100%;
+        height: auto;
+        padding-top: 2%;
+        padding-bottom: 2.5%;
+    }
+    label{
+        width: 100%;
+        height: auto;
+        display: block;
+        color: $white;
+        font-size: $FontSoft;
+        font-weight: 200;
+        font-style: italic;
+        padding-top: 1.3%;
+        padding-bottom:2%;
+    }
+    &__Input {
+        width: 46%;
+        height: auto;
+        padding: 10px 10px 10px 10px;
+        border-radius: 2px 2px 2px 2px;
+        border: 1px solid transparent;
+        font-weight: 100;
+        background-color:$white;
+        text-transform: capitalize;
+        font-style: italic;
+        color: #847f7f;
+        font-size: .98rem;
+        &--FirstName{
+            margin-right: 2%;
+        }
+        &--email{
+            width: 94.5%;
+            text-align:left;
+            text-transform: lowercase;
+        }
+        &--textArea{
+            width: 94.5%;
+        }
+        &--btn{
+            width: 25%;
+            padding: 15px 15px 22px 7px;
+            margin-top: 5%;
+            background-color: $grayLight;
+            color: $gray-dark;
+            transition: .3s all ease;
+            cursor: pointer;
+            &:hover{
+                background-color: $secondary;
+                color: $graybn;
+            }
+        }
+    }
+    // address form input ends here
+    // addressdiv starts here
+    &__AddressDiv {
+        width: 35%;
+        height: auto;
+        padding: 4%;
+        margin-left: 6%;
+      }
+    &__OfficeAddress {
+        width: 100%;
+        height: auto;
+        margin-top: 10%;
+      }
+    &__TitleAddress {
+        font-size: 1rem;
+        padding-left: 2%;
+        font-weight: 700;
+        color: $white;
+        cursor: pointer;
+      }
+    &__OfficeLocation {
+        width: 100%;
+        height: auto;
+        display: block;
+        margin-top: 6%;
+        color: white;
+        text-align: left;
+        font-size: 1rem;
+        padding-left: 2%;
+      }
+    &__OfficePhone {
+        margin-top: 6%;
+        width: 100%;
+        height: auto;
+      }
+    &__PhoneNumber{
+        @extend .address__OfficeLocation;
+    } 
+    &__WorkingHour{
+        @extend .address__OfficePhone;
+    }
+    &__WorkingHeading{
+        @extend .address__OfficeLocation;
+        &:last-child{
+            margin-top: 1%;
+        }
+    }
+    &__TitleWorking{
+        @extend .address__TitleAddress;
+    }
+    // address ends
+}    

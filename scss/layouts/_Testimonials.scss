@@ -1,0 +1,95 @@
+.Testimonials{
+    width: 100%;
+    height: auto;
+    position: relative;
+    background-image: linear-gradient(-45deg, $red 33%, $red 33.33%, $red 66.666%, $red 66.66%);
+    background-blend-mode:soft-light;
+    &::after {
+        position: absolute;
+        content: ' ';
+        width: 100%;
+        height: 40px;
+        top: -27px;
+        left: 0;
+        display: block;
+        background: linear-gradient(-45deg, transparent 33%, #fff 33.33%, #fff 66.666%, transparent 66.66%);
+        background-size: 5px 26px;
+        transform: rotate(180deg);
+      }
+    &__TestimonialDescription{
+        width: 80%;
+        height:auto;
+        margin: 0 auto;
+
+    }
+    &__testimonialHeader{
+        @extend .about__aboutTitle;
+    }
+    &__testimonialTitle{
+        @extend .mainFeatures__featureTitle;
+        color: $white;
+    }
+    &__testimonialDescription{
+        @extend .mainFeatures__featurediscription;
+        color: $white;
+    }
+    &__TestimonialsMainBody{
+        @extend .mainFeatures__cardSpecification;
+    }
+    &__testimony{
+        @extend .mainFeatures__specification;
+    }
+    &__comma{
+        width: 90%;
+        height: auto;
+        margin: 0 auto;
+        padding-top: 8%;
+        padding-bottom: 4%;
+    }
+    &__text{
+        @extend .team__playerWords;
+        &--opinion{
+            width: 95%;
+        }
+    }
+    &__textdetails{
+        @extend .team__playerOpinion;
+        &--change {
+            font-size: .99rem;
+            line-height: 28px;
+            font-style: italic;
+        }
+    }
+    &__PicName{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 2%;
+    }
+    &__picture{
+        width: 17%;
+        height: auto;
+
+    }
+    &__image{
+        width: 100%;
+        height: auto;
+        border-radius: 50%;
+    }
+    &__person{
+        width: 78%;
+        height: auto;
+
+    }
+    &__person {
+        color: $gray-dark;
+        font-weight: $Medium;
+    }
+    &__designation{
+        font-size:$SmallFont;
+        color: $grayLight;
+        font-style: italic;
+    }
+}

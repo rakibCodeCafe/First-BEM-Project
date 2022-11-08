@@ -1,0 +1,88 @@
+.banner{
+    width: 100%;
+    height: auto;
+    background-color: $white;
+
+    &__BannerBackground{
+        width: 100%;
+        background-position: revert;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 109px 0;
+        position: relative;
+        z-index: 2;
+        &::before{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            content: " ";
+            left: 0;
+            top:0;
+            background-color:$bannerblue;
+            z-index: -1;
+            opacity: .95;
+        }
+      }
+    &__BannerContent {
+        width: 90%;
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        overflow: hidden;
+      }
+    &__BannerDetail {
+        flex-basis: 58%;
+        height: auto;
+        display: column;
+        transform: translateY(-20%);
+        font-size: $FontSoft;
+        color: $white;
+      }
+    &__BannerTitle {
+        padding-top: 4%;
+      } 
+    &__bannerHeading {
+        font-weight:$extraLight;
+        font-size: $BiggerFont;
+        margin-bottom: 0%;
+        color: $white;
+      }  
+    &__BannerBrief {
+      margin-top: 3%;
+    }
+    &__BannerButtonPart {
+      flex-basis: 30%;
+      display: column;
+      transform: translate(24%,15%);
+    }
+    &__BannerSimpleText {
+      color: $white;
+      font-size: $UnderOne;
+      font-weight:$Light;
+      text-transform: capitalize;
+    }
+    &__Bannerbtn {
+      width: 74%;
+      height: auto;
+      background-color: $transparent;
+      color: $gray-dark;
+      display: inline-block;
+      border: 2px solid $white;
+      color: $white;
+      padding: 19px 19px 19px 19px;
+      border-radius: 33px 33px 33px 33px;
+      font-weight:$Medium;
+      font-size:$FontSoft;
+      box-shadow: 0 0 8px 0 $graybtn;
+      transform: translate(-16%,16%);
+      transition: .3s all ease;
+      opacity: .89;
+      text-align: center;
+      &:hover{
+        color: $black;
+        background-color: $white;
+      }
+    }
+    
+}

@@ -1,0 +1,29 @@
+.brand{
+    width: 100%;
+    height: auto;
+    background-color: $white;
+    &__BrandBrief{
+        @extend .services__Titlepart;
+    }
+    &__BrandTitle{
+        @extend .services__sectiontitle;
+    }
+    &__BrandHeading{
+        @extend .mainFeatures__featureTitle;
+    }
+    &__BrandParagraph{
+        @extend .mainFeatures__featurediscription;
+    }
+    &__BrandSection{
+        @extend .gallery__GalleryPorducts;
+    }
+    &__BrandLogo {
+        width: 80%;
+        height: auto;
+        transform: translate(2%);
+        transition: .3s all ease-in-out;
+        &:hover{
+            transform:scale(1.2);
+        }
+      }
+}

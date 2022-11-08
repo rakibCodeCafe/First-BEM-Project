@@ -1,0 +1,167 @@
+// reset code
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: $fontFamily;
+    font-size: $paragraphFont;
+    font-weight: $Light;
+    background-color: $transparent;
+}
+.MainContent{
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    overflow: hidden;
+    &--transform{
+        transform: translateY(-50.8%);
+    }
+}
+.SetUp::after,.SetUp::before{
+    content: " ";
+    clear: both;
+    display: table;
+}
+ul{
+    list-style: none;
+}
+li{
+    display: inline-block;
+}
+a{
+    text-decoration: none;
+}
+img{
+    width: 100%;
+    vertical-align: middle;
+    object-fit: cover;
+}
+.quote{
+    display: block;
+    font-size: 20px;
+    text-shadow: 2px 2px 1px rgba(157, 134, 134, 0.4);
+    text-align: left;
+    &--modification{
+        color: $cyan;
+        font-size: 1.8rem;
+    }
+}
+.card{
+    display:column;
+    flex-basis: 32%;
+    height: auto;
+    box-shadow: 0 0 8px 0  $secondary;
+    border: 1px solid $transparent;
+    &--GallerySingle{
+        flex-basis: 25%;
+    }
+    &--brandcard{
+        flex-basis: 20%;
+    }
+}
+.media{
+    text-shadow: 2px 2px 1px rgba(157, 134, 134, 0.4);
+    transition: .3s all ease;
+    color: $gray-dark;
+    &:hover{
+        transform: rotate(360deg);
+        color:$moreDark;
+    }
+}
+.btn{
+    text-align: center;
+    width: 70%;
+    display: block;
+    text-transform: capitalize;
+    height: auto;
+    padding: 5%;
+    border: 1px solid  $cyan;
+    margin: 0 auto;
+  }
+// title setup loop starts
+
+$map:(h1, $titleFont, $SuperBold, $white), (h2, $titleSecond, $SemiBold, $light), (h3, $titleThird, $Medium, $gray-dark),(h4, $titleFourth, $Regular, $gray-dark), (h5, $titleFifth, $extraLight,$dark),(h6,$titleSixth, $extraLight, $gray-dark );
+@each $name, $FontSize, $FontWeight, $Color in $map {
+    #{$name}{
+        font-size: $FontSize;
+        font-weight: $FontWeight;
+        color: $Color;
+    }
+}
+// title setup loop ends
+
+// text transform loops starts
+
+$list:(uppercase, lowercase, capitalize,);
+@each $t in $list {
+    .text-#{$t}{
+        text-transform: $t;
+    }
+}
+
+// text transform loops end
+$list:(left,right,center, justified);
+@each $a in $list {
+    .text-#{$a}{
+        text-align: $a;
+    }
+}
+
+// padding top & bottom loops strat
+
+@for $p from 1 through 30 {
+    .pt-#{$p}{
+        padding-top: $p*10px;
+    }
+}
+@for $t from 1 through 30 {
+    .pb-#{$t}{
+        padding-bottom: $t*10px;
+    }
+}
+// padding top & bottom loops end
+
+// margin top & bottom loops start
+
+@for $m from 1 through 30 {
+    .mt-#{$m}{
+        margin-top: $m*10px;
+    }
+}
+@for $m from 1 through 30 {
+    .mb-#{$m}{
+        margin-bottom: $m*10px;
+    }
+}
+// margin top & bottom loops end
+
+@mixin webBanner {
+    width: 100%;
+    height: auto;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: 2;
+        &::before{
+            width: 100%;
+            height: 100%;
+            top: 0;
+            content: " ";
+            position: absolute;
+            background-color:  $black;
+            z-index: -2;
+            opacity: .45;
+        }
+}
+.typed-cursor{
+    color: $graybtn;
+    &--blink{
+        animation: typedjsBlink 1s infinite;
+    }
+}

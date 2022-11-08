@@ -1,0 +1,149 @@
+// header section starts here
+#header{
+    background-color: $gray-dark;
+}
+.header{
+    width: 100%;
+    height: auto;
+    &__hero{
+        @include webBanner;
+        top: 0;
+        &::after{
+            position: absolute;
+            content: ' ';
+            width: 100%;
+            height: 40px;
+            bottom: -12px;
+            left: 0;
+            display: block;
+            background: linear-gradient(-45deg, transparent 33%, #fff 33.33%, #fff 66.666%, transparent 66.66%);
+            background-size: auto;
+            background-size: 5px 32px;
+            transform: rotate(180deg);
+
+        }
+    }
+
+    &__MainHeader{
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+    }
+    &__logo{
+        width: 30%;
+        height: auto;
+        float: left;
+    }
+    &__companyLogo{
+        width: 35%;
+        height: auto;
+        cursor: pointer;
+    }
+    &__nav{
+        width: 55%;
+        height: auto;
+        float: left;
+        padding:2px 0px;
+        margin-left: 15%;
+        margin-top: 0.5%;
+    }
+    &__Navigation {
+        margin-left: 35%;
+      }
+    &__NavAnchor{
+        color:$light;
+        padding: 16px 3px;
+        font-weight: $Medium;
+        position: relative;
+        font-size: 1rem;
+        transition: .5s all ease;
+        &::before{
+            width: 80%;
+            height: 3%;
+            position: absolute;
+            content: " ";
+            background-color: $light;
+            left: 11%;
+            top: 72%;
+            transition: .5s all ease;
+            display:none;
+        }
+        &:hover{
+            color:$grayLight ;
+        }
+        &:hover::before{
+            display: block;
+            
+        }
+    }
+    // main header ends
+    &__bannerContent{
+        width: 70%;
+        height: auto;
+        margin: 0 auto;
+    }
+    &__bannerTitle{
+        width: 100%;
+        height: auto;
+    }
+    &__heroTitle{
+        text-shadow: 0 0 8px $gray;
+        padding-bottom: 10px;
+    }
+    &__autotype{
+        color: $graybtn;
+    }
+    &__heroSecondTitle{
+        font-style: italic;
+        font-weight: $Regular;
+        text-shadow: 0 0 8px $gray;
+    }
+    &__bannerParagraph{
+        width: 100%;
+        height: auto;
+    }
+    &__heroDiscription{
+        color:$light;
+        padding-bottom: 6%;
+        font-weight:$Light;
+        font-size: 1.163rem;
+        line-height: 28px;
+        text-shadow: 0 0 8px $gray;
+        font-style: italic;
+    }
+    &__button{
+        width: 90%;
+        height: auto;
+        padding: 2%;
+        margin: 0 auto;
+    }
+    &__btn{
+        width: 30%;
+        height: auto;
+        background-color:$graybn;
+        color: $dark;
+        display: inline-block;
+        border: 1px solid $transparent;
+        padding: 17px 17px 21px 17px;
+        border-radius: 33px 33px 33px 33px;
+        font-weight: $Regular;
+        font-size: $btnFont;
+        transform: translateX(60%);
+        transition: .3s all ease-in-out;
+    }
+    &__btn:first-child{
+        width: 27%;
+        margin-right: 25px;
+        &:hover{
+            background-color: $graybtn;
+        }
+    }
+    &__btn:last-child{
+        color:$graybn;
+        background-color: $primary;
+        &:hover{
+            background-color:$blue;
+        }
+    }
+    
+}

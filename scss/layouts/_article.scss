@@ -1,0 +1,133 @@
+.article{
+    @extend .services;
+    &::before{
+        top: -28px;
+    }
+    &::after{
+        bottom: 2%;
+    }
+    &__ContentDetails{
+        @extend .services__Titlepart;
+    }
+    &__TitleBox{
+        @extend .services__sectiontitle;
+    }
+    &__TitleMain{
+        @extend .mainFeatures__featureTitle;
+    }
+    &__ParagraphBox{
+        @extend .mainFeatures__featurediscription;
+    }
+    &__ArticleBox{
+        @extend .services__servicesitems;
+    }
+    &__ArticleCards{
+        @extend .card;
+    }
+    &__ImageBox{
+        @extend .team__teamPicture;
+    }
+    &__TitleTag{
+        width: 100%;
+        height: auto;
+        display: block;
+        color: $info;
+        padding: 3%;
+        font-size: $SmallFont;
+        text-transform: capitalize;
+        letter-spacing: 2px;
+        font-style: italic;
+        cursor: pointer;
+    }
+    &__ArticleTitle{
+        cursor: pointer;
+        width: 100%;
+        height: auto;
+        padding: 2%;
+        line-height: 30px;
+        font-weight: $Medium;
+        font-size:$paragraphFont;
+        font-style: italic;
+        position: relative;
+        &::before{
+            width: 46%;
+            height: 3px;
+            background-color:    $purple;
+            content: "";
+            position: absolute;
+            top: 47%;
+            left: 2%;
+        }
+    }
+    &__author{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-around;
+        padding: 2%;
+        padding-bottom:4%;
+    }
+    &__AuthorImageBox{
+        width: 10%;
+        height: auto;
+    }
+    &__writerImage{
+        border-radius: 50%;
+        width: 80%;
+        height:auto;
+
+    }
+    &__ArticleDateBox{
+        width: 70%;
+        height: auto;
+    }
+    &__ArticlePublishedDate{
+        font-size: 1rem;
+        color: $grayLight;
+    }
+    &__AuthorName{
+        font-size: .85rem;
+        color: $info;
+        margin-right: 1%;
+        cursor: pointer;
+    }
+    &__ArticleCommentBox {
+        width: 9%;
+        height: auto;
+        margin-right: 7%;
+      }
+    &__ArticleComment {
+        font-size: .85rem;
+        color: #a49c9c;
+        cursor: pointer;
+      }
+    &__ArticleBtnBox {
+        width: 35%;
+        height: auto;
+        margin: 0 auto;
+        display: flex;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+        padding-top: 7%;
+        padding-bottom: 8%;
+        
+      }
+    &__ArticleBtn {
+        border: 1.7px solid $blue;
+        color:  $blue;
+        padding: 1.2%;
+        text-transform: capitalize;
+        font-weight: 300;
+        font-size: .94rem;
+        transition: .3s all ease-in-out;
+        &:hover{
+            background-color:$blue;
+            border: 1.7px solid $transparent;
+            color: $white;
+        }
+      }    
+}
+
